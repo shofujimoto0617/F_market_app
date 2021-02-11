@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\MainUserController;
+use App\Http\Controllers\MainAdminController;
+
 
 
 /*
@@ -36,3 +38,7 @@ Route::middleware(['auth:sanctum,web', 'verified'])->get('/dashboard', function 
 Route::get('/admin/logout', [AdminController::class, 'destroy'])->name('admin.logout');
 
 Route::get('/user/logout', [MainUserController::class, 'Logout'])->name('user.logout');
+
+// Admin All Route
+
+Route::get('/admin/profile', [MainAdminController::class, 'AdminProfile'])->name('admin.profile');
