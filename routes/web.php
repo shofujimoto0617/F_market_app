@@ -45,4 +45,4 @@ Route::get('/admin/profile', [MainAdminController::class, 'AdminProfile'])->name
 
 Route::get('/admin/profile/edit', [MainAdminController::class, 'AdminProfileEdit'])->name('admin.profile.edit');
 
-Route::post('/admin/profile/create', [MainAdminController::class, 'AdminProfileCreate'])->name('admin.profile.create');
+Route::post('/admin/profile/update', [MainAdminController::class, 'AdminProfileUpdate'])->name('admin.profile.update');

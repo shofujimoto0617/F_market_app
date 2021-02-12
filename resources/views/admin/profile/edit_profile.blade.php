@@ -5,7 +5,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <div class="row" style="padding: 20px;">
         <div class="col-md-6">
-            <form method="post" action="{{ route('admin.profile.create') }}" enctype="multipart/form-data">
+            <form method="post" action="{{ route('admin.profile.update') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="mb-3">
                     <label for="exampleInputName" class="form-label">Admin Name</label>
