@@ -19,7 +19,7 @@ class MainAdminController extends Controller
         return view('admin.profile.edit_profile', compact('editData'));
     }
 
-    public function AdminProfileCreate(Request $request) {
+    public function AdminProfileUpdate(Request $request) {
         $data = Admin::find(1);
         $data->name = $request->name;
         $data->email = $request->email;
