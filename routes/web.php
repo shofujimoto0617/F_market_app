@@ -42,3 +42,7 @@ Route::get('/user/logout', [MainUserController::class, 'Logout'])->name('user.lo
 // Admin All Route
 
 Route::get('/admin/profile', [MainAdminController::class, 'AdminProfile'])->name('admin.profile');
+
+Route::get('/admin/profile/edit', [MainAdminController::class, 'AdminProfileEdit'])->name('admin.profile.edit');
+
+Route::post('/admin/profile/create', [MainAdminController::class, 'AdminProfileCreate'])->name('admin.profile.create');
