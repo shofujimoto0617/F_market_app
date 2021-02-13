@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\MainUserController;
 use App\Http\Controllers\MainAdminController;
+use App\Http\Controllers\Admin\ItemController;
+use App\Http\Controllers\Admin\GenreController;
 
 
 
@@ -54,3 +56,9 @@ Route::get('/admin/profile', [MainAdminController::class, 'AdminProfile'])->name
 Route::get('/admin/profile/edit', [MainAdminController::class, 'AdminProfileEdit'])->name('admin.profile.edit');
 
 Route::post('/admin/profile/update', [MainAdminController::class, 'AdminProfileUpdate'])->name('admin.profile.update');
+
+// Admin Genre All Route
+
+Route::get('/admin/genre', [GenreController::class, 'Genre'])->name('admin.genre');
+
+Route::post('/admin/genre/create', [GenreController::class, 'GenreCreate'])->name('admin.genre.create');

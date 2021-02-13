@@ -727,8 +727,8 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
-                                    <i class="mdi mdi-email"></i> Message
+                                    <a href="{{ route('admin.genre') }}">
+                                    <i class="mdi mdi-email"></i> Genre
                                     </a>
                                 </li>
                                 <li>
