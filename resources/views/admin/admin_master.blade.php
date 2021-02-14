@@ -732,6 +732,16 @@
                                     </a>
                                 </li>
                                 <li>
+                                    <a href="{{ route('admin.item.new') }}">
+                                    <i class="mdi mdi-email"></i> Item
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('admin.item') }}">
+                                    <i class="mdi mdi-email"></i> Item All
+                                    </a>
+                                </li>
+                                <li>
                                     <a href="#"> <i class="mdi mdi-diamond-stone"></i> Projects </a>
                                 </li>
                                 <li>

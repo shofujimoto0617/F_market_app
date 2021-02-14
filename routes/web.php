@@ -62,3 +62,11 @@ Route::post('/admin/profile/update', [MainAdminController::class, 'AdminProfileU
 Route::get('/admin/genre', [GenreController::class, 'Genre'])->name('admin.genre');
 
 Route::post('/admin/genre/create', [GenreController::class, 'GenreCreate'])->name('admin.genre.create');
+
+// Admin Item All Route
+
+Route::get('/admin/item', [ItemController::class, 'Item'])->name('admin.item');
+
+Route::get('/admin/item/new', [ItemController::class, 'ItemNew'])->name('admin.item.new');
+
+Route::post('/admin/item/create', [ItemController::class, 'ItemCreate'])->name('admin.item.create');
