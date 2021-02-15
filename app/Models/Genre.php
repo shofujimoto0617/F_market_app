@@ -12,7 +12,9 @@ class Genre extends Model
         'name',
     ];
 
-    public function user() {
+    // protected $primaryKey = "Genre_id";
+
+    public function item() {
         return $this->hasMany('App\Models\Item');
     }
 }

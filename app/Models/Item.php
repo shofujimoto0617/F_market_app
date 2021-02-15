@@ -16,7 +16,7 @@ class Item extends Model
         'profile_photo_path',
     ];
 
-    public function user() {
+    public function genre() {
         return $this->belongsTo('App\Models\Genre', 'genres_id');
     }
 }
