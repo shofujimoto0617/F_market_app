@@ -40,4 +40,10 @@ class ItemController extends Controller
 
         return Redirect()->route('admin.item')->with('success', 'Item Created Successfull');
     }
+
+    public function ItemShow($id) {
+        $item = Item::find($id);
+
+        return view('admin.item.item_show', compact('item'));
+    }
 }
