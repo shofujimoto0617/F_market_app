@@ -70,3 +70,5 @@ Route::get('/admin/item', [ItemController::class, 'Item'])->name('admin.item');
 Route::get('/admin/item/new', [ItemController::class, 'ItemNew'])->name('admin.item.new');
 
 Route::post('/admin/item/create', [ItemController::class, 'ItemCreate'])->name('admin.item.create');
+
+Route::get('/item/show/{id}', [ItemController::class, 'ItemShow']);
