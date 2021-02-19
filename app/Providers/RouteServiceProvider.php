@@ -17,10 +17,10 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/dashboard';
+    public const HOME = '/f_market';
 
     public static function redirectTo($guard) {
-        return $guard.'/dashboard';
+        return $guard.'/f_market';
     }
 
     /**
