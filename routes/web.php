@@ -6,6 +6,8 @@ use App\Http\Controllers\MainUserController;
 use App\Http\Controllers\MainAdminController;
 use App\Http\Controllers\Admin\ItemController;
 use App\Http\Controllers\Admin\GenreController;
+use App\Http\Controllers\user\UserController;
+
 
 
 
@@ -23,6 +25,9 @@ use App\Http\Controllers\Admin\GenreController;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/f_market', [UserController::class, 'Home'])->name('user.home');
+
 
 Route::group(['prefix'=>'admin','middleware'=>['admin:admin']], function() {
     Route::get('/login', [AdminController::class, 'loginForm']);
