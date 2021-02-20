@@ -7,6 +7,8 @@ use App\Http\Controllers\MainAdminController;
 use App\Http\Controllers\Admin\ItemController;
 use App\Http\Controllers\Admin\GenreController;
 use App\Http\Controllers\user\UserController;
+use App\Http\Controllers\user\UserItemController;
+
 
 
 
@@ -26,7 +28,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/f_market', [UserController::class, 'Home'])->name('user.home');
 
 
 Route::group(['prefix'=>'admin','middleware'=>['admin:admin']], function() {
@@ -46,6 +47,8 @@ Route::get('/admin/logout', [AdminController::class, 'destroy'])->name('admin.lo
 
 // User All Route
 
+Route::get('/f_market', [UserController::class, 'Home'])->name('user.home');
+
 Route::get('/user/logout', [MainUserController::class, 'Logout'])->name('user.logout');
 
 Route::get('/user/profile', [MainUserController::class, 'UserProfile'])->name('user.profile');
@@ -53,6 +56,8 @@ Route::get('/user/profile', [MainUserController::class, 'UserProfile'])->name('u
 Route::get('/user/profile/edit', [MainUserController::class, 'UserProfileEdit'])->name('profile.edit');
 
 Route::post('/user/profile/update', [MainUserController::class, 'UserProfileUpdate'])->name('user.profile.update');
+
+Route::get('f_maket/item/{id}', [UserItemController::class, 'ItemShow']);
 
 // Admin All Route
 
