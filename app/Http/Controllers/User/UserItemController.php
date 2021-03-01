@@ -14,4 +14,10 @@ class UserItemController extends Controller
         return view('user.item.show', compact('item'));
 
     }
+
+    public function ItemIndex() {
+        $items = Item::all();
+
+        return view('user.item.index', compact('items'));
+    }
 }
