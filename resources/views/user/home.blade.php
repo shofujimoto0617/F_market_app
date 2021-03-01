@@ -210,7 +210,7 @@
         <div class="container">
 
             <div class="section-title" data-aos="fade-up">
-            <h2>Item</h2>
+            <h2><a href="{{ route('item.index') }}">Item</a></h2>
             </div>
 
             <div class="row" data-aos="fade-up">

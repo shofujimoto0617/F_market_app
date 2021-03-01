@@ -59,6 +59,8 @@ Route::post('/user/profile/update', [MainUserController::class, 'UserProfileUpda
 
 Route::get('f_maket/item/{id}', [UserItemController::class, 'ItemShow']);
 
+Route::get('f_maket/items', [UserItemController::class, 'ItemIndex'])->name('item.index');
+
 // Admin All Route
 
 Route::get('/admin/profile', [MainAdminController::class, 'AdminProfile'])->name('admin.profile');
