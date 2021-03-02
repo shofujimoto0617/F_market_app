@@ -7,6 +7,7 @@
         <div class="portfolio-info">
         <h4><a href="{{ url('f_maket/item/'.$item['id']) }}">{{ $item['name'] }}</a></h4>
         <p>{{ $item['explanation'] }}</p>
+        <h5 class="venobox review-link">¥{{ number_format($price_tax) }} (tax price)</h5>
         <a href="{{ route('user.home') }}" class="mb-5 btn btn-primary">Back</a>
         </div>
     </div>

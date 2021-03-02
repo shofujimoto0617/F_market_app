@@ -10,8 +10,10 @@ class UserItemController extends Controller
 {
     public function ItemShow($id) {
         $item = Item::find($id);
+        $price = $item->price;
+        $price_tax = $price * 1.10;
 
-        return view('user.item.show', compact('item'));
+        return view('user.item.show', compact('item', 'price_tax'));
 
     }
 
