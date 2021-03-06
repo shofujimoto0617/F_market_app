@@ -19,4 +19,8 @@ class Item extends Model
     public function genre() {
         return $this->belongsTo('App\Models\Genre', 'genres_id');
     }
+
+    public function cart_items() {
+        return $this->hasMany('App\Models\CartItems');
+    }
 }

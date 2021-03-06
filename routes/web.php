@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\ItemController;
 use App\Http\Controllers\Admin\GenreController;
 use App\Http\Controllers\user\UserController;
 use App\Http\Controllers\user\UserItemController;
+use App\Http\Controllers\user\CartItemsController;
 
 
 
@@ -84,3 +85,9 @@ Route::get('/admin/item/new', [ItemController::class, 'ItemNew'])->name('admin.i
 Route::post('/admin/item/create', [ItemController::class, 'ItemCreate'])->name('admin.item.create');
 
 Route::get('/item/show/{id}', [ItemController::class, 'ItemShow']);
+
+// CartItems All Route
+
+Route::post('/cartitems/create', [CartItemsController::class, 'CartItemsCreate'])->name('cartitem.create');
+
+Route::get('/cartitems/index', [CartItemsController::class, 'CartItemsIndex'])->name('cartitem.index');
