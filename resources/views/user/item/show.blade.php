@@ -25,7 +25,7 @@
                         <option value="10">10個</option>
                     </select>
                 </div>
-                <input type="hidden" id="{{ $item['id'] }}" name="item_id">
+                <input type="hidden" value="{{ $item['id'] }}" name="item_id">
                 <button type="submit" class="btn btn-primary">Add to cart</button>
 
             </form>

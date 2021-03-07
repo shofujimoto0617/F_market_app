@@ -16,7 +16,7 @@ class CartItems extends Model
     public function item() {
         return $this->belongsTo('App\Models\Item', 'item_id');
     }
-    public function customer() {
+    public function user() {
         return $this->belongsTo('App\Models\User', 'user_id');
     }
 }
