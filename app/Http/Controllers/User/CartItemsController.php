@@ -24,6 +24,8 @@ class CartItemsController extends Controller
     }
 
     public function CartItemsIndex() {
-        return view('user.cart_items.index');
+        $cart_items = CartItems::with('item')->get();
+
+        return view('user.cart_items.index', compact('cart_items'));
     }
 }
