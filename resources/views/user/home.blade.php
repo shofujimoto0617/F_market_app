@@ -68,6 +68,7 @@
             </ul>
           </li>
           <li><a href="{{ route('user.profile') }}">Profile</a></li>
+          <li><a href="{{ route('shippingaddresses.index') }}">My Address</a></li>
           <li><a href="{{ route('user.logout') }}">Logout</a></li>
 
         </ul>

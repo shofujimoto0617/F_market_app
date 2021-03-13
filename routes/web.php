@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\GenreController;
 use App\Http\Controllers\user\UserController;
 use App\Http\Controllers\user\UserItemController;
 use App\Http\Controllers\user\CartItemsController;
+use App\Http\Controllers\user\ShippingAddressesController;
 
 
 
@@ -91,3 +92,9 @@ Route::get('/item/show/{id}', [ItemController::class, 'ItemShow']);
 Route::post('/cartitems/create', [CartItemsController::class, 'CartItemsCreate'])->name('cartitem.create');
 
 Route::get('/cartitems/index', [CartItemsController::class, 'CartItemsIndex'])->name('cartitem.index');
+
+// ShippingAddresses All Route
+
+Route::get('/user/addresses', [ShippingAddressesController::class, 'ShippingAddressIndex'])->name('shippingaddresses.index');
+
+Route::post('/address/create', [ShippingAddressesController::class, 'ShippingAddressCreate'])->name('shippingaddress.create');
