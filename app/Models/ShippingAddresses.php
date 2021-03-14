@@ -11,7 +11,7 @@ class ShippingAddresses extends Model
     protected $fillable = [
         'user_id',
         'postcode',
-        'address',
+        'adderss',
         'destination',
     ];
     public function user() {
