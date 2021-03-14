@@ -37,7 +37,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach{{ $shipping_addresse as $shipping_address}}
+                    @foreach ($shipping_addresses as $shipping_address)
                         <tr>
                             <td>{{ $shipping_address['postcode'] }}</td>
                             <td>{{ $shipping_address['adderss'] }}</td>
